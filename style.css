@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url("/images/sky.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+/* 
+.text {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+} */
+
+h1 {
+    color: #111; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 50px; 
+    font-weight: bold; 
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left; 
+}
+
+.knockout {
+    background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+    color: red;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: arial, helvetica;
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+  
+.highway {
+    height: 200px;
+    width: 500%;
+    display: block;
+    background-image: url("/images/road.jpg");
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    animation: high-way 5s linear infinite;
+}
+
+@keyframes high-way {
+    100% {
+        transform: translateX(-3400px);
+    }
+}
+
+.city {
+    height: 250px;
+    width: 500%;
+    background-image: url("/images/city.png");
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+
+@keyframes city {
+    100% {
+        transform: translateX(-1500px);
+    }
+}
+
+.car {
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.car img {
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car {
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+.wheel {
+    position: absolute;
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.wheel img {
+    width: 72px;
+    height: 72px;
+    animation: wheel 1s linear infinite;
+}
+
+.back-wheel {
+    left: -165px;
+    position: absolute;
+}
+
+.front-wheel {
+    left: 80px;
+    position: absolute;
+}
+
+@keyframes wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+}
